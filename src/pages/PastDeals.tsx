@@ -17,7 +17,7 @@ const PastDeals = () => {
   useEffect(() => {
     const fetchOffers = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/offers/${roomCode}`);
+        const res = await fetch(`https://negotiationbackend.onrender.com/offers/${roomCode}`);
         const data = await res.json();
         setOffers(data);
       } catch (error) {
