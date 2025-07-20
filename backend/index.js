@@ -152,8 +152,3 @@ app.get("/offers/:roomCode", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("Backend is working!");
 });
-// ✅ Start the server
-const PORT = process.env.PORT || 5050;
-server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
