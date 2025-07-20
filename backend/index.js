@@ -17,6 +17,15 @@ app.use('/offers', acceptedOffersRoute);
 
 const server = http.createServer(app);
 
+const startServer = async () => {
+  await connectDB(); // ensure DB is ready
+  server.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+};
+
+startServer();
+
 // ✅ Initialize io here
 const io = new Server(server, {
   cors: {
