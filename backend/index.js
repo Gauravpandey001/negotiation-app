@@ -12,7 +12,6 @@ const app = express();
 app.use(cors());
 
 app.use(express.json()); 
-const acceptedOffersRoute = require('./routes/acceptedOffers');
 app.use('/offers', acceptedOffersRoute);
 
 const server = http.createServer(app);
