@@ -6,7 +6,7 @@ interface Offer {
   from: string;
   acceptedBy: string;
   roomCode: string;
-  createdAt: string;
+  acceptedAt: string;
 }
 
 const PastDeals = () => {
