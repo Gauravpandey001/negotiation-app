@@ -147,7 +147,8 @@ app.get("/offers/:roomCode", async (req, res) => {
     const offers = await AcceptedOffer.find({ roomCode }).sort({ acceptedAt: -1 });
     res.status(200).json(offers);
   } catch (error) {
-    res.status(500).json({ message: "Failed to fetch offers", error });
+    console.error("❌ Fetch offers failed:", error); // ✅ log actual issue
+    res.status(500).json({ message: "Failed to fetch offers", error: error.message });
   }
 });
 app.get("/", (req, res) => {
