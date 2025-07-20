@@ -50,7 +50,9 @@ const PastDeals = () => {
               <p className="text-sm text-green-600">
                 ✅ Accepted By: <span className="font-semibold">{offer.acceptedBy}</span>
               </p>
-              <p className="text-xs text-gray-400">{new Date(offer.createdAt).toLocaleString()}</p>
+              <p className="text-xs text-gray-400">
+  Accepted at: {new Date(offer.acceptedAt).toLocaleString()}
+</p>
             </li>
           ))}
         </ul>
